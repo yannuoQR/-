@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>四选一导航</title>
