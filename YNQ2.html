@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- 修改视口设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CHENTER & KATER</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+
+        .main-container {
+            position: relative;
+            width: 100vw;     /* 使用视口宽度 */
+            height: 100vh;    /* 使用视口高度 */
+            background: url('https://yannuoqr.github.io/-/box.jpg') no-repeat center center/contain;
+        }
+
+        .hotspot {
+            position: absolute;
+            display: block;
+        }
+
+        /* 使用百分比定位（基于1264x2513换算） */
+        .link-1 { 
+            width: 84.1%;    /* 1063/1264 */
+            height: 9.3%;    /* 234/2513 */
+            left: 7.2%;      /* 91/1264 */
+            top: 20.0%;      /* 502/2513 */
+        }
+        .link-2 { 
+            width: 83.8%;    /* 1059/1264 */
+            height: 9.8%;    /* 247/2513 */
+            left: 7.6%;      /* 96/1264 */
+            top: 39.7%;      /* 998/2513 */
+        }
+        .link-3 { 
+            width: 83.9%;    /* 1060/1264 */
+            height: 8.9%;    /* 224/2513 */
+            left: 7.3%;      /* 92/1264 */
+            top: 52.2%;      /* 1311/2513 */
+        }
+        .link-4 { 
+            width: 83.6%;    /* 1057/1264 */
+            height: 9.0%;    /* 227/2513 */
+            left: 7.5%;      /* 95/1264 */
+            top: 72.3%;      /* 1818/2513 */
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <a href="https://www.instagram.com/?hl=en" class="hotspot link-1" target="_blank"></a>
+        <a href="https://vk.com/" class="hotspot link-2" target="_blank"></a>
+        <a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%9A%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BA%D0%B8" 
+           class="hotspot link-3" 
+           target="_blank"></a>
+        <a href="https://web.telegram.org/a/#6232479376" 
+           class="hotspot link-4" 
+           target="_blank"></a>
+    </div>
+
+    <!-- 添加自适应脚本 -->
+    <script>
+        function adjustLayout() {
+            const container = document.querySelector('.main-container');
+            const imgRatio = 2513 / 1264; // 原始图片比例
+            
+            // 根据当前视口比例调整布局
+            if (window.innerWidth / window.innerHeight < 1264/2513) {
+                container.style.backgroundSize = '100% auto';
+            } else {
+                container.style.backgroundSize = 'auto 100%';
+            }
+        }
+
+        // 初始化时执行
+        adjustLayout();
+        // 窗口变化时重新调整
+        window.addEventListener('resize', adjustLayout);
+    </script>
+</body>
+</html>
