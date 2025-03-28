@@ -1,30 +1,47 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>四选一导航</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1264, initial-scale=1.0">
+    <title>精准定位导航页</title>
     <style>
-        body { font-family: Arial; padding: 20px }
-        .option {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            position: relative;
+            width: 1264px;
+            height: 2513px;
+            margin: 0 auto;
+            background: url('https://yannuoqr.github.io/-/box.jpg') no-repeat;
+        }
+
+        .hotspot {
+            position: absolute;
             display: block;
-            margin: 15px 0;
-            padding: 15px;
-            background: #f0f0f0;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #333;
-            transition: 0.3s;
+            /* 已移除红色边框 */
         }
-        .option:hover {
-            background: #e0e0e0;
-            transform: scale(1.02);
-        }
+
+        /* 精确像素定位 */
+        .link-1 { width: 1063px; height: 234px; left: 91px; top: 502px; }
+        .link-2 { width: 1059px; height: 247px; left: 96px; top: 998px; }
+        .link-3 { width: 1060px; height: 224px; left: 92px; top: 1311px; }
+        .link-4 { width: 1057px; height: 227px; left: 95px; top: 1818px; }
     </style>
 </head>
 <body>
-    <h2>请选择要访问的页面：</h2>
-    
-    <a href="https://seller.ozon.ru/app/products" class="option">选项一</a>
-    <a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%9A%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BA%D0%B8" class="option">选项二</a>
-    <a href="https://www.instagram.com/?hl=en" class="option">选项三</a>
-    <a href="https://vk.com/" class="option">选项四</a>
+    <div class="main-container">
+        <a href="https://www.instagram.com/?hl=en" class="hotspot link-1" target="_blank"></a>
+        <a href="https://vk.com/" class="hotspot link-2" target="_blank"></a>
+        <a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%9A%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%BA%D0%B8" 
+           class="hotspot link-3" 
+           target="_blank"></a>
+        <a href="https://web.telegram.org/a/#6232479376" 
+           class="hotspot link-4" 
+           target="_blank"></a>
+    </div>
 </body>
 </html>
